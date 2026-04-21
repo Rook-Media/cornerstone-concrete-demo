@@ -1,0 +1,72 @@
+/* ── FAQ HERO ── */
+.page-hero.hero-faq {
+  background-image: linear-gradient(rgba(8,8,10,0.88), rgba(8,8,10,0.78)), linear-gradient(135deg, #0d0d10 0%, #141418 50%, #0d0d0d 100%);
+}
+
+/* ── FAQ CATEGORY TABS ── */
+#faq-page { background: var(--black); }
+#faq-tabs {
+  background: var(--surface);
+  padding: 1.5rem 1.5rem 0;
+  border-bottom: 1px solid var(--border);
+}
+#faq-content {
+  background: var(--black);
+  padding: 3rem 1.5rem 4rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+.faq-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 0;
+  justify-content: center;
+  padding-bottom: 1rem;
+}
+.faq-tab {
+  padding: 0.55rem 1.3rem;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: var(--grey);
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s, color 0.2s;
+}
+.faq-tab:hover,
+.faq-tab.active {
+  background: rgba(200,146,42,0.12);
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+/* ── FAQ SECTIONS ── */
+.faq-section {
+  margin-bottom: 3.5rem;
+  scroll-margin-top: calc(var(--total-fixed) + 30px);
+}
+.faq-section-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--accent);
+  margin-bottom: 1.2rem;
+  padding-bottom: 0.7rem;
+  border-bottom: 1px solid var(--border);
+  letter-spacing: -0.2px;
+}
+.faq-page-list {
+  max-width: 780px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* ── FAQ NO-ANSWER CTA ── */
+#faq-cta { background: var(--surface); text-align: center; }

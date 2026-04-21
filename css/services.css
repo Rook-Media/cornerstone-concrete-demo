@@ -1,0 +1,67 @@
+/* ── SERVICE PAGE HERO GRADIENTS ── */
+.page-hero.hero-stamped   { background-image: linear-gradient(rgba(12,8,2,0.88), rgba(12,8,2,0.78)), linear-gradient(135deg, #1a1200 0%, #2a1e08 50%, #0d0d0d 100%); }
+.page-hero.hero-driveways { background-image: linear-gradient(rgba(10,10,12,0.88), rgba(10,10,12,0.78)), linear-gradient(135deg, #0d0d0d 0%, #181818 60%, #111 100%); }
+.page-hero.hero-patios    { background-image: linear-gradient(rgba(8,12,6,0.88), rgba(8,12,6,0.78)), linear-gradient(135deg, #0e1408 0%, #1a2010 50%, #0d0d0d 100%); }
+.page-hero.hero-repair    { background-image: linear-gradient(rgba(14,8,8,0.88), rgba(14,8,8,0.78)), linear-gradient(135deg, #140e0e 0%, #1e1212 50%, #0d0d0d 100%); }
+.page-hero.hero-epoxy     { background-image: linear-gradient(rgba(6,10,16,0.88), rgba(6,10,16,0.78)), linear-gradient(135deg, #0a0e14 0%, #101820 50%, #0d0d0d 100%); }
+.page-hero.hero-retaining { background-image: linear-gradient(rgba(10,10,8,0.88), rgba(10,10,8,0.78)), linear-gradient(135deg, #10100e 0%, #1c1a10 50%, #0d0d0d 100%); }
+
+/* ── SERVICE DETAIL PROSE ── */
+.service-detail {
+  max-width: 860px;
+  margin: 0 auto;
+}
+.service-detail p {
+  font-size: 0.97rem;
+  color: var(--grey);
+  line-height: 1.78;
+  margin-bottom: 1.5rem;
+}
+.service-detail h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 0.7rem;
+  margin-top: 0.2rem;
+}
+
+/* ── INCLUDED GRID (reuses why-item style, 3-col default) ── */
+.included-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+}
+.included-item {
+  padding: 1.8rem 1.6rem;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--accent);
+  border-radius: var(--radius);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.included-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 40px rgba(0,0,0,0.4);
+}
+.included-icon {
+  font-size: 1.4rem;
+  margin-bottom: 0.7rem;
+  display: block;
+}
+.included-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 0.4rem;
+}
+.included-desc { font-size: 0.83rem; color: var(--grey); line-height: 1.62; }
+
+/* ── RELATED SERVICES SECTION ── */
+#related-services { background: var(--surface); }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 768px) {
+  .included-grid { grid-template-columns: 1fr; }
+}

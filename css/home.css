@@ -1,0 +1,166 @@
+/* ── HERO (homepage only) ── */
+#hero {
+  min-height: calc(100vh - var(--total-fixed));
+  margin-top: var(--total-fixed);
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background-image:
+    linear-gradient(rgba(15,10,5,0.72), rgba(15,10,5,0.52)),
+    url('../Images/Golden%20hour%20glow%20on%20luxury%20home.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-color: #0d0d0d;
+  padding: 80px 5%;
+  position: relative;
+}
+.hero-content { max-width: 700px; }
+.hero-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 1.2rem;
+}
+.hero-eyebrow::before {
+  content: '';
+  display: inline-block;
+  width: 28px; height: 2px;
+  background: var(--accent);
+}
+h1.hero-headline {
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(2.4rem, 5vw, 3.8rem);
+  font-weight: 800;
+  line-height: 1.1;
+  color: var(--white);
+  margin-bottom: 1.2rem;
+  letter-spacing: -0.5px;
+}
+h1.hero-headline span { color: var(--accent); }
+.hero-sub {
+  font-size: 1.05rem;
+  color: rgba(240,237,232,0.7);
+  margin-bottom: 2.2rem;
+  max-width: 540px;
+  line-height: 1.65;
+}
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+.hero-trust-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 0.4rem 0.9rem;
+  background: rgba(28,28,28,0.78);
+  border: 1px solid rgba(200,146,42,0.35);
+  border-radius: 100px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: rgba(255,255,255,0.9);
+  letter-spacing: 0.3px;
+  backdrop-filter: blur(6px);
+}
+
+/* ── FINANCING (homepage only) ── */
+#financing {
+  background: var(--surface);
+  border-top: 3px solid var(--accent);
+  text-align: center;
+  padding: 80px 5%;
+}
+.financing-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0.35rem 1rem;
+  background: rgba(200,146,42,0.12);
+  border: 1px solid rgba(200,146,42,0.3);
+  border-radius: 100px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 1.5rem;
+}
+#financing h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(1.6rem, 3vw, 2.4rem);
+  font-weight: 800;
+  color: var(--white);
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+#financing .financing-desc {
+  font-size: 0.98rem;
+  color: var(--grey);
+  max-width: 540px;
+  margin: 0 auto 2.2rem;
+  line-height: 1.7;
+}
+
+/* ── WORD REVEAL ANIMATION ── */
+@keyframes wordReveal {
+  from { opacity: 0; transform: translateY(22px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.headline-animate .word {
+  display: inline-block;
+  opacity: 0;
+  animation: wordReveal 0.55s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation-delay: calc(var(--word-index) * 0.09s + 0.25s);
+}
+@media (prefers-reduced-motion: reduce) {
+  .headline-animate .word { animation: none; opacity: 1; }
+}
+
+/* ── SERVICE CARD 3D TILT ── */
+.service-card-link { perspective: 900px; }
+.service-card {
+  transform-style: preserve-3d;
+  will-change: transform;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+/* ── BEFORE / AFTER SLIDE ANIMATION ── */
+.ba-card {
+  transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.7s ease;
+  opacity: 0;
+}
+.ba-card.before { transform: translateX(-36px); }
+.ba-card.after  { transform: translateX(36px); }
+.before-after-grid.revealed .ba-card { transform: translateX(0); opacity: 1; }
+.before-after-grid.revealed .ba-card.after { transition-delay: 0.12s; }
+.before-after-grid.revealed .ba-card:hover { transform: translateY(-6px); }
+@media (prefers-reduced-motion: reduce) {
+  .ba-card { opacity: 1; transform: none; transition: none; }
+}
+
+/* ── HOMEPAGE RESPONSIVE OVERRIDES ── */
+@media (max-width: 768px) {
+  .hero-content { text-align: center; max-width: 100%; }
+  .hero-eyebrow { justify-content: center; }
+  .hero-buttons { justify-content: center; }
+  .hero-trust-badges { justify-content: center; }
+}
+@media (max-width: 480px) {
+  .hero-buttons { flex-direction: column; align-items: stretch; }
+}

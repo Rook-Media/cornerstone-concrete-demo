@@ -1,0 +1,80 @@
+/* ── LOCATION PAGE HERO GRADIENTS ── */
+.page-hero.hero-location {
+  background-image: linear-gradient(rgba(10,8,4,0.88), rgba(10,8,4,0.78)), linear-gradient(135deg, #141008 0%, #1e1a0e 50%, #0d0d0d 100%);
+}
+
+/* ── NEIGHBORHOOD LIST ── */
+.neighborhood-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 1.5rem;
+}
+.neighborhood-tag {
+  padding: 0.45rem 1rem;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.76rem;
+  font-weight: 600;
+  color: var(--grey);
+  transition: border-color 0.2s, color 0.2s;
+}
+.neighborhood-tag:hover { border-color: var(--accent); color: var(--accent); }
+
+/* ── LOCAL FLAVOR PROSE ── */
+.location-detail {
+  max-width: 860px;
+  margin: 0 auto;
+}
+.location-detail p {
+  font-size: 0.97rem;
+  color: var(--grey);
+  line-height: 1.78;
+  margin-bottom: 1.5rem;
+}
+
+/* ── LOCATION SERVICES GRID ── */
+#location-services { background: var(--black); }
+.location-services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+/* ── RECENT PROJECTS ── */
+#location-projects { background: var(--surface); }
+
+/* ── LOCATION FAQ ── */
+#location-faq { background: var(--black); }
+
+/* ── RELATED SERVICE AREAS ── */
+#related-areas { background: var(--surface); }
+.related-areas-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 16px;
+  margin-top: 1.5rem;
+}
+a.related-area-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  padding: 1.4rem 1.5rem;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  text-decoration: none;
+  transition: border-color 0.2s, transform 0.2s;
+}
+a.related-area-card:hover { border-color: var(--accent); transform: translateY(-2px); }
+.area-city { font-family: 'Montserrat', sans-serif; font-size: 1rem; font-weight: 700; color: var(--white); }
+.area-desc { font-size: 0.81rem; color: var(--grey); line-height: 1.5; flex: 1; }
+.area-link { font-family: 'Montserrat', sans-serif; font-size: 0.78rem; font-weight: 600; color: var(--accent); margin-top: 0.6rem; }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 768px) {
+  .location-services-grid { grid-template-columns: 1fr; }
+  .related-areas-grid { grid-template-columns: 1fr 1fr; }
+}

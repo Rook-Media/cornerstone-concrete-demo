@@ -1,0 +1,22 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mkdir -p \"/c/Users/dr2bs/OneDrive/Desktop/Rook Media/Demo Websites/Cornerstone Concrete/pages\")",
+      "Bash(mkdir -p \"/c/Users/dr2bs/OneDrive/Desktop/Rook Media/Demo Websites/Cornerstone Concrete/css\")",
+      "Bash(mkdir -p \"/c/Users/dr2bs/OneDrive/Desktop/Rook Media/Demo Websites/Cornerstone Concrete/js\")",
+      "Bash(powershell -Command ' *)",
+      "Bash(powershell -ExecutionPolicy Bypass -File fix_encoding.ps1)",
+      "Bash(powershell -ExecutionPolicy Bypass -File \"fix_breadcrumbs.ps1\")",
+      "Bash(powershell -ExecutionPolicy Bypass -File \"fix_animations.ps1\")",
+      "Bash(powershell -ExecutionPolicy Bypass -File \"fix_nav.ps1\")",
+      "Bash(powershell -ExecutionPolicy Bypass -File \"fix_chatbot.ps1\")",
+      "Bash(powershell -ExecutionPolicy Bypass -File \"fix_encoding2.ps1\")",
+      "Bash(powershell -ExecutionPolicy Bypass -File \"fix_chars.ps1\")",
+      "Bash(grep -E '[?]{1,}' pages/about.html)",
+      "Bash(powershell -ExecutionPolicy Bypass -File \"fix_emoji.ps1\")",
+      "Bash(powershell *)",
+      "Bash(python3 -)",
+      "Bash(py --version)"
+    ]
+  }
+}
